@@ -4,6 +4,8 @@ var product = new Vue({
     product: 'Socks',
     description: 'A pair of warm, fuzzy socks',
     image: './assets/vmSocks-green-onWhite.jpg',
-    altText: "awesome socks"
+    altText: 'awesome socks',
+    inStock: true,
+    onSale: true
   }
 });
