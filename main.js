@@ -6,17 +6,26 @@ var product = new Vue({
     variants: [
       {
         variantId: 2234,
-        variantColor: 'green'
+        variantColor: 'green',
+        variantImage: './assets/vmSocks-green-onWhite.jpg'
       },
       {
         variantId: 2235,
-        variantColor: 'blue'
+        variantColor: 'blue',
+        variantImage: './assets/vmSocks-blue-onWhite.jpg'
       }
     ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
     image: './assets/vmSocks-green-onWhite.jpg',
     altText: 'awesome socks',
     inStock: true,
-    onSale: true
+    cart: 0
+  },
+  methods: {
+    addToCart() {
+      this.cart += 1;
+    },
+    updateProduct(variantImage) {
+      this.image = variantImage;
+    }
   }
 });
