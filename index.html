@@ -5,7 +5,6 @@
   <meta charset="utf-8" />
   <title>Product App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Vue Theme">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 
@@ -14,7 +13,10 @@
   <div class="nav-bar"></div>
 
   <div id="app">
-    <product :premium="premium"></product>
+    <div class="cart">
+      <p>Cart ({{ cart.length }})</p>
+    </div>
+    <product :premium="premium" @add-to-cart="updateCart"></product>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
